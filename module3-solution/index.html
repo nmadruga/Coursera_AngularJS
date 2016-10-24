@@ -14,11 +14,10 @@
       <input type="text" ng-model="list.searchTerm" placeholder="item name">
       <button ng-click="list.narrowItems();">Narrow It Down For Me!</button>
 
-      <shopping-list
-        items="list.items"
+      <found-items
+        items="list.found"
         title="{{list.title}}"
-        bad-remove="list.removeItem"
-        on-remove="list.removeItem(index)"></shopping-list>
+        on-remove="list.removeItem(index)"></found-items>
 
     </div>
 
