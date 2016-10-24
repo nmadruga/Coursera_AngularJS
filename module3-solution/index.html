@@ -5,17 +5,14 @@
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Directives with Isolate Scope and '&'</title>
+    <title>Narrow List App</title>
   </head>
   <body>
-    <h1>Directives with Isolate Scope and '&'</h1>
+    <h1>Narrow List App</h1>
 
-    <!-- LIST #1 - unlimited items -->
     <div id="list" ng-controller='NarrowItDownController as list'>
-      <input type="text" ng-model="list.itemName" placeholder="item name">
-      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
-      <button ng-click="list.addItem();">Add Item</button>
-      <span>{{ list.lastRemoved }}</span>
+      <input type="text" ng-model="list.searchTerm" placeholder="item name">
+      <button ng-click="list.narrowItems();">Narrow It Down For Me!</button>
 
       <shopping-list
         items="list.items"
