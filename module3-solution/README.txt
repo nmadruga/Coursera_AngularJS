@@ -1,1 +1,1 @@
-MOdule 3 - Search in List
+Module 3 - Narrow in List
