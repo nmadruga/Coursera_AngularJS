@@ -9,14 +9,16 @@ function UserService() {
 
 
 	service.addInfo = function( firstName, lastName, 
-								email, phone, item, name ){
+								email, phone, item, 
+								name, description ){
 		user = {
 			firstName : firstName,
 			lastName: lastName,
 			email: email,
 			phone: phone,
 			item : item,
-			name: name
+			name: name,
+			description: description
 		};
 	}
 
