@@ -3,8 +3,8 @@
 angular.module('public')
 .controller('SignupController', SignupController);
 
-SignupController.$inject = ['MenuService'];
-function SignupController(MenuService) {
+SignupController.$inject = ['MenuService', 'UserService'];
+function SignupController(MenuService, UserService) {
   var ctrl = this;
   ctrl.finished = false;
 
@@ -12,16 +12,17 @@ function SignupController(MenuService) {
 
   	if( valid )
   	{
-  		console.log( ctrl.user.short_name );
   		MenuService.getItem( ctrl.user.short_name)
   		.then(function successCallback(response) {
-  			console.log("Found");
-  			ctrl.ItemFound = true;
+        console.log( response );
+  			UserService.addInfo( ctrl.user.firstname, ctrl.user.lastname,
+  								           ctrl.user.email, ctrl.user.phone, 
+                             ctrl.user.short_name, response.data.name );
+		    ctrl.ItemFound = true;
 		    ctrl.finished = true;
 		  }, function errorCallback(response) {
-		  	console.log("Not found");
 		  	ctrl.ItemFound = false;
-		    ctrl.finished = true;
+		    ctrl.finished = false;
 		  });
   	}
   };

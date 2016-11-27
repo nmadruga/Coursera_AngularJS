@@ -2,7 +2,6 @@
   <div ng-controller="SignupController as ctrl">
     <h1> Sing Up for newsletter </h1>
 
-    <span ng-if="!(ctrl.finished && ctrl.ItemFound)">
       <fieldset id="textForm">
         <legend>Registration</legend> 
         <form name='regForm' novalidate>
@@ -55,7 +54,6 @@
           </div>
         </form>
       </fieldset>
-    </span>
     <span ng-if="(ctrl.finished && ctrl.ItemFound)">
       <span>Your information has been saved</span>
     </span>
