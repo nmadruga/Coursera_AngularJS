@@ -20,7 +20,7 @@
       <div>
         Description: {{ctrl.user.description}}
       </div>
-      <img width="200" height="200" ng-src="images/menu/{{ctrl.user.item}}/{{ctrl.user.item}}.jpg">
+      <img width="200" height="200" ng-src="{{ctrl.getImageUrl()}}">
     </div>
   </span>
   <span ng-if="!ctrl.hasUser()"> Not Signed Up Yet.

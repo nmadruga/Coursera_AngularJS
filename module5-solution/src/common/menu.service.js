@@ -28,7 +28,7 @@ function MenuService($http, ApiPath) {
   };
 
   service.getItem = function (short_name) {
-    return $http.get(ApiPath + '/categories/'+ short_name + '.json')
+    return $http.get(ApiPath + '/menu_items/'+ short_name + '.json')
   };
 
 }

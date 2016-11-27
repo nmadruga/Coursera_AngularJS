@@ -12,12 +12,12 @@ function SignupController(MenuService, UserService) {
 
   	if( valid )
   	{
-  		MenuService.getItem( ctrl.user.short_name)
+  		MenuService.getItem( ctrl.user.short_name )
   		.then(function successCallback(response) {
   			UserService.addInfo( ctrl.user.firstname, ctrl.user.lastname,
   								           ctrl.user.email, ctrl.user.phone, 
                              ctrl.user.short_name, response.data.name,
-                             response.data.special_instructions );
+                             response.data.description );
 		    ctrl.ItemFound = true;
 		    ctrl.finished = true;
 		  }, function errorCallback(response) {
