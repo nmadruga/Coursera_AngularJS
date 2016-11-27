@@ -37,6 +37,28 @@
 }
 /* END HOME PAGE */
 
+/* SINGUP PAGE */
+#textForm {
+  color: #000;
+}
+
+#textForm legend, h3{
+  color:  #FF7F50;
+}
+
+#textForm div {
+  margin: 15px auto 15px;
+}
+
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+/* END SIGNUP PAGE */
+
 /* MENU CATEGORIES PAGE */
 .category-tile {
   position: relative;
